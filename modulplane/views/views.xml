@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.actions.act_window" id="action_plane_llibre_tree">
+		<field name="name">Llibre</field>
+		<field name="res_model">plane.llibre</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="action_plane_editorial_tree">
+		<field name="name">Editorial</field>
+		<field name="res_model">plane.editorial</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="action_plane_autor_tree">
+		<field name="name">Autor</field>
+		<field name="res_model">plane.autor</field>
+	</record>
+
+	<menuitem name="plane" id="plane_menu1" />
+	<menuitem name="Llibre" parent="plane_menu1" id="plane_menu1_1" action="action_plane_llibre_tree" />	
+	<menuitem name="Editorial" parent="plane_menu1" id="plane_menu1_1" action="action_plane_editorial_tree" />	
+	<menuitem name="Autor" parent="plane_menu1" id="plane_menu1_2" action="action_plane_autor_tree" />		
+
+	<record model="ir.ui.view" id="view_plane_llibre_tree">
+		<field name="name">plane_llibre</field>
+		<field name="model">plane.llibre</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Tasca">
+				<field name="codi"/>
+				<field name="isbn"/>
+				<field name="titol"/>
+				<field name="pagines"/>				
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="view_plane_editorial_tree">
+		<field name="name">plane_editorial</field>
+		<field name="model">plane.editorial</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Editorial">
+				<field name="nom"/>
+				<field name="telf"/>
+				<field name="email"/>				
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="view_plane_autor_tree">
+		<field name="name">plane_autor</field>
+		<field name="model">plane.autor</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Autor">
+				<field name="nom"/>
+				<field name="cognoms"/>
+				<field name="telf"/>				
+				<field name="email"/>				
+			</tree>
+		</field>
+	</record>
+
+	</data>
+</odoo>

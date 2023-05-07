@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_plane_autor,access_plane_autor,model_plane_autor,base.group_user,1,1,1,1
+access_plane_editorial,access_plane_editorial,model_plane_editorial,base.group_user,1,1,1,1
+access_plane_llibre,access_plane_llibre,model_plane_llibre,base.group_user,1,1,1,1

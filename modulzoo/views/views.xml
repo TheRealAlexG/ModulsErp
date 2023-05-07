@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.actions.act_window" id="action_zoo_llibre_tree">
+		<field name="name">Llibre</field>
+		<field name="res_model">zoo.llibre</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="action_zoo_editorial_tree">
+		<field name="name">Editorial</field>
+		<field name="res_model">zoo.editorial</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="action_zoo_autor_tree">
+		<field name="name">Autor</field>
+		<field name="res_model">zoo.autor</field>
+	</record>
+
+	<menuitem name="zoo" id="zoo_menu1" />
+	<menuitem name="Llibre" parent="zoo_menu1" id="zoo_menu1_1" action="action_zoo_llibre_tree" />	
+	<menuitem name="Editorial" parent="zoo_menu1" id="zoo_menu1_1" action="action_zoo_editorial_tree" />	
+	<menuitem name="Autor" parent="zoo_menu1" id="zoo_menu1_2" action="action_zoo_autor_tree" />		
+
+	<record model="ir.ui.view" id="view_zoo_llibre_tree">
+		<field name="name">zoo_llibre</field>
+		<field name="model">zoo.llibre</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Tasca">
+				<field name="codi"/>
+				<field name="isbn"/>
+				<field name="titol"/>
+				<field name="pagines"/>				
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="view_zoo_editorial_tree">
+		<field name="name">zoo_editorial</field>
+		<field name="model">zoo.editorial</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Editorial">
+				<field name="nom"/>
+				<field name="telf"/>
+				<field name="email"/>				
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="view_zoo_autor_tree">
+		<field name="name">zoo_autor</field>
+		<field name="model">zoo.autor</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Autor">
+				<field name="nom"/>
+				<field name="cognoms"/>
+				<field name="telf"/>				
+				<field name="email"/>				
+			</tree>
+		</field>
+	</record>
+
+	</data>
+</odoo>
