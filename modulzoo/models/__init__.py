@@ -1,3 +1,3 @@
-from . import zoo_llibre
-from . import zoo_editorial
-from . import zoo_autor
+from . import zoo_animal
+from . import zoo_especie
+from . import zoo_zoo

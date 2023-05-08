@@ -1,3 +1,4 @@
-from . import plane_llibre
-from . import plane_editorial
-from . import plane_autor
+from . import plane_aeroport
+from . import plane_vol
+from . import plane_avio
+from . import plane_pilot
