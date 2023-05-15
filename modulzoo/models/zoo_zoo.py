@@ -5,4 +5,3 @@ class zoo_zoo(models.Model):
     ciutat = fields.Char('Ciutat')
     pais = fields.Char('Pais')
     grandaria = fields.Float('Grandaria')
-    id = fields.Integer('ID')
