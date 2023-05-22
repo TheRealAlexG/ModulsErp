@@ -5,3 +5,4 @@ class zoo_zoo(models.Model):
     ciutat = fields.Char('Ciutat')
     pais = fields.Char('Pais')
     grandaria = fields.Float('Grandaria')
+    animal_ids = fields.One2many('zoo.animal','zoo_id', string='Animal')

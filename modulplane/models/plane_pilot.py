@@ -7,3 +7,5 @@ class plane_pilot(models.Model):
     nif = fields.Char('NIF', required=True)     
     telf = fields.Char('Telf')   
     email = fields.Text('Email')
+    vols_id = fields.One2many('plane.vol','pilot_id',string = 'vols')
+    

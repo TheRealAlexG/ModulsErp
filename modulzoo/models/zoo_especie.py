@@ -5,5 +5,6 @@ class zoo_especie(models.Model):
     nomCientific = fields.Char('Nom Cientific') 
     nomVulgar = fields.Char('Nom Vulgar')
     perill = fields.Char('Perill')
+    animal_ids = fields.One2many('zoo.animal','especie_id', string='animal')
 
     
